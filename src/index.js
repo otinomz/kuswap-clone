@@ -1,8 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+
+
+
+
+// STORE -> GLOBALIZED STATE
+
+// ACTION INCREMENT -
+
+// REDUCER
+
+// DISPATCHk
+
+
+
 
 ReactDOM.render(
   <React.StrictMode>

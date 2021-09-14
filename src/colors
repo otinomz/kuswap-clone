@@ -6,7 +6,8 @@ background: linear-gradient(102deg, rgba(16,27,80,1) 0%,
 #0bc5b3
 
 green text color: #0fbf84
-white text color: #e9ebee
+white color: #ffffff
+greywhite text color: #e9ebee
 blue text coolor: #6e92ce
 
 dark shades of background #101627
@@ -17,3 +18,11 @@ some shades of blue close to the button colors: #1fa2fe
 side menu card: #31374e
 
 company logo https://app.kuswap.finance/
+
+icons Home Name <RiHome3Line/>
+exchange <RiExchangeLine/>
+Liquidity<RiWaterFlashFill/>
+trading battle <IoIosTrophy/>
+launch pad <GrLaunch/>
+analytics <SiGoogleanalytics/>
+hammer <ImHammer2/>

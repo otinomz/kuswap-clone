@@ -1,0 +1,356 @@
+.left-pane{
+
+    width: 222px;
+    min-height: 100vh;
+    background:  rgba(255, 255, 255, 0.1);
+    background: rgba(14, 14, 68, 0.836);
+    border-right: 1px solid #e9ebee25;
+    position: fixed;
+    box-sizing: border-box;
+    padding: 20px 10px;
+    transition: 400ms;
+    z-index: 500;
+
+
+    .logo{
+        width: 180px;
+        height: 60px;
+        overflow: hidden;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        
+        .off{
+            color: white;
+            font-family: cursive;
+            font-size: 30px;
+            font-weight: 900;
+            transition: 0.5s;
+            opacity: 1;
+        }
+
+        img{
+            max-width: 100%;
+            height: 100%;
+        }
+
+    }
+
+    
+    .toggle-icon{
+        display: inline-block;
+        position: absolute;
+        top: 5%;
+        right: -15px;
+        border-radius: 50%;
+        height: 30px;
+        width: 30px;
+        transition: 700ms ease;
+  
+
+        &:hover{
+            background: red;
+            font-size: 18px;
+            background: rgba(0, 0, 8, 0.3);
+        }
+
+        button{
+            color: white;
+            font-weight:bold;
+                border: none;
+                font-size: 18px;
+                padding: 5px;
+                text-align: center;
+                border-radius: 50%;
+                height: 30px;
+                width: 30px;
+                background: rgba(0, 0, 8, 0.3);
+                backdrop-filter: blur(10px);
+                transition: 700ms ease;
+                cursor: pointer;
+    
+            &:hover{
+                background: rgba(0, 0, 8, 0.31);
+            }
+    
+        }
+
+    }
+
+    .items{
+        font-size: 25px;
+        margin-top: 10px;
+        position: relative;
+        width: 230px;
+        overflow-x: hidden;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;  
+        height: 320px;
+        overflow-y: scroll;
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        *{
+            list-style-type: none;
+            text-decoration: none;
+            color: white;
+            transition: 700ms ease;
+                
+            &:hover{
+                color:#bbcce6b0 ;
+            }
+        }
+
+        li{
+            font-size: 17px;    
+            height: 28px;
+            width: 190;
+            margin-bottom: 25px;
+            color: white;
+        }
+
+        .go{
+           font-size: 14px;
+        }
+
+        .selected{
+            padding: 11px 110px 11px 0px;
+            border-radius: 8px;
+            background: rgba(187, 187, 204, 0.144);
+
+    
+        }
+
+        .icon{
+            display: inline-block;
+            font-size: 16px;
+            color: white;
+            width: 40px;
+            margin: 20px 0px;
+            text-align: center;
+            line-height: 40px;
+
+        }
+
+        .text{
+            position: absolute;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 73px;
+            opacity: 1;
+            transition: opacity .2s ease-in;
+        }
+
+
+        .sub-menu{
+            color: #333;
+            margin-left: 30px;
+            border-top: 1px solid grey;
+            width: 70px;
+            // height: 20px;
+            position: absolute;
+            box-sizing: border-box;
+            padding: 15px 0px;
+            transition: 0.5s ease;
+            left: -150px;
+            border-left: 5px solid sandybrown;
+            // overflow-x: hidden;
+        }
+
+        .sub-menu.active{
+            left: 10px;
+        }
+
+
+    }
+
+    .account{
+        position: absolute;
+        // top: 0;
+        bottom: 0;
+        font-size: 12px;
+        margin: 30px 10px 30px;
+        border-radius: 10px;
+        padding: 10px 15px;
+        background: rgba(187, 187, 204, 0.144);
+        color: white;
+        border: none;
+        // opacity: 1;
+        transition: 0.5s ease;
+        left: 0px;
+
+        h3{
+            margin-bottom: 10px;
+        }
+
+        .tokens{
+            display: flex;
+            padding: 5px;
+            margin-top: 15px;
+        }
+
+        .name{
+            background: rgba(187, 187, 204, 0.144);
+            border-radius: 7px;
+            padding: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .username{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-right: 10px;
+            margin-left: 3px;
+        }
+
+        .moneySide{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            
+            .money{
+                color:#0fbf84;
+                font-weight: bold;
+            }
+        }
+
+
+    }
+
+}
+.container{
+    margin-left: 220px;
+    position: relative;
+    transition: 0.5s;
+
+}
+
+
+.left-pane.inactive{
+        width: 80px;
+        transition: 0.5s;
+
+        .off{
+            opacity: 0;
+        }
+
+        .items{
+            height: 85vh;
+        }
+
+        .text{
+            opacity: 0;
+        }
+
+        .selected{
+            padding: 15px 0px;
+
+        }
+
+        .account{
+            left: -300px;
+        }
+
+        .sub-menu{
+            display: none;
+        }
+
+
+}
+    .container.inactive{
+        margin-left: 80px;
+        // position: relative;
+
+    }
+
+
+
+nav{
+    height: 90px;
+    // width: 85%;
+    // width: 100%;
+    background: rgba(187, 187, 204, 0.144);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // position: fixed;
+    position: sticky;
+
+    .logo{
+        font-size: 20px;
+        margin-left: 60px;
+
+        .social-icon{
+            margin-right: 25px;
+        }
+    }
+
+    button{
+        margin-right: 50px;
+        font-size: 15px;
+        font-weight: 900;
+        padding: 10px 25px;
+        height: 40px;
+        color: white;
+        border: 1px solid  rgb(71, 103, 190);
+        display: flex;
+        justify-content: space-around;
+        border-radius: 20px;
+        align-items: center;
+        transition: 700ms ease-in;
+        opacity: 0.3;
+        background: #222;
+        backdrop-filter: blur(25px);
+        background: linear-gradient(to right, rgba(71, 103, 190, 0.096), purple);
+
+        &:hover{
+            opacity: 0.5;
+            backdrop-filter: blur(5px);
+            background: linear-gradient(to right, rgb(71, 103, 190), purple);
+        }
+
+        .wallet{
+            margin: 4px 5px 0px;
+            font-size: 17px;
+        }
+    }
+}
+
+
+footer{
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+    border-top: 1px solid rgba(128, 128, 128, 0.233) ;
+
+    img{
+        width: 50px;
+    }
+
+    .image{
+        display: flex;
+        align-items: center;
+    }
+
+    p{
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .price{
+        color: #0fbf84;
+        font-weight: bold;
+    }
+
+}

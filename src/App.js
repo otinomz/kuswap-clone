@@ -1,24 +1,53 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from 'react'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
+import './App.scss';
+import { LeftPane } from './components';
+import Home from '../src/components/pages/Home'
 
-function App() {
+const App = () => {
+  const [isActive, setIsActive] = useState(true)
+  // const [isShown, setIsShown] = useState(false)
+  // {`container ${inactive ? 'inactive' : ""}`}
+  
+  function toggleActive() {
+    setIsActive(!isActive)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <div className="App">
+
+        {/* <LeftPane onCollapse={() => {
+          console.log();
+          // setIsactive(inactive)
+        }} /> */}
+
+        {/* <LeftPane changeState={inactive => setInactive(!inactive)} /> */}
+        <LeftPane toggleActive={toggleActive} isActive={isActive}/>
+
+        <Switch>
+          <div className={`container ${isActive ?  "": 'inactive'}`}>
+          {/* <div className="container"> */}
+            <Route path='/' exact> <Home/></Route>
+            <Route path='/exchange'> Exchange </Route>
+            <Route path='/liquidity'> Liquidity </Route>
+            <Route path='/charts'> Charts </Route>
+            <Route path='/farms'> Farms </Route>
+            <Route path='/pools'> Pools </Route>
+            <Route path='/trading'> Trading Battle </Route>
+            <Route path='/launchpad'> Launchpad</Route>
+            <Route path='/lottery'> Lottery</Route>
+            <Route path='/ku'> Kudrops </Route>
+            <Route path='/analytics'> Analytics </Route>
+            <Route path='/governance'> Governance</Route>
+            <Route path='/bridge'> Bridge </Route>
+            <Route path='/more'> More</Route>
+          </div>
+        </Switch>
+
+      </div>
+    </BrowserRouter>
+    
   );
 }
 
