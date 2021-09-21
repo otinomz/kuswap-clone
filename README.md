@@ -1,3 +1,7 @@
+What is KuSWap? KuSwap is the first Automated Market Maker built on top of the KuCoin Community Chain (KCC), and it debuted on its own Launchpad in June 2021, which also happened to be the first KuCoin Community Chain crowdfunding. Their UI is quite fascinating and so recreated it using React js. 
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +72,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `yarn build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
