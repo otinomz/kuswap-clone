@@ -102,8 +102,14 @@
     background: linear-gradient(100deg, rgba(16,27,80,1) 0%, 
             rgba(9,15,23,1) 100%, rgba(27,30,57,1) 100%);
 
-    box-shadow: 5px 10px 20px 5px rgba(2, 8, 2, 0.452) inset;
+    background: rgba(187, 187, 204, 0.144);
+    background: linear-gradient(
+        to right bottom,   
+        rgba(54, 119, 94, 0.7),
+        rgba(150, 150, 170, 0.3));
 
+    box-shadow: 5px 10px 20px 5px rgba(2, 8, 2, 0.452) inset;
+    box-shadow: 6px 6px 20px rgba(122, 122, 122, 0.671);
 
     h1{
         font-size: 42px;
@@ -348,11 +354,13 @@
 
 .slide{
     height: 300px;
-    width: 400px;
+    width: 250px;
     margin: 0 auto;
     background: red;
-    display: grid;
-    grid-template-columns: 1fr ;
+    display: flex;
+    justify-content: center;
+    // display: grid;
+    // grid-template-columns: 1fr ;
     overflow: hidden;
     overflow-x: scroll;
 
@@ -362,5 +370,6 @@
         width: 100px;
         background: white;
         margin: 20px;
+        position: relative;
     }
 }

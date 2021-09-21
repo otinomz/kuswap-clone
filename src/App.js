@@ -4,10 +4,10 @@ import './App.scss';
 import { LeftPane } from './components';
 import Home from '../src/components/pages/Home'
 
+
+
 const App = () => {
   const [isActive, setIsActive] = useState(true)
-  // const [isShown, setIsShown] = useState(false)
-  // {`container ${inactive ? 'inactive' : ""}`}
   
   function toggleActive() {
     setIsActive(!isActive)
@@ -17,17 +17,10 @@ const App = () => {
     <BrowserRouter>
       <div className="App">
 
-        {/* <LeftPane onCollapse={() => {
-          console.log();
-          // setIsactive(inactive)
-        }} /> */}
-
-        {/* <LeftPane changeState={inactive => setInactive(!inactive)} /> */}
-        <LeftPane toggleActive={toggleActive} isActive={isActive}/>
+        <LeftPane toggleActive={toggleActive} isActive={isActive} />
 
         <Switch>
           <div className={`container ${isActive ?  "": 'inactive'}`}>
-          {/* <div className="container"> */}
             <Route path='/' exact> <Home/></Route>
             <Route path='/exchange'> Exchange </Route>
             <Route path='/liquidity'> Liquidity </Route>

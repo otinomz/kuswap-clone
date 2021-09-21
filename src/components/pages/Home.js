@@ -28,7 +28,6 @@ function Home() {
 
 
             <div className='card'>
-            
                 <div className="items">
                     <h1>11m</h1>
                     <p>KuSwap Total Value Locked</p>

@@ -20,91 +20,96 @@ import { AiOutlineGift } from "react-icons/ai";
 import SubMenu from './SubMenu'
 
 
-const items = [
-    {
-        name: "Home",
-        to: '/',
-        iconItem: `${<RiHome3Fill />}`
-    },
-    {
-        name: "Exchange",
-        to: '/exchange',
-        iconItem: `${ <RiExchangeLine/>}`
-    },
-    {
-        name: "Liquidity",
-        to: '/liquidity',
-        iconItem: `${<RiWaterFlashFill/>}`
-    },
-    {
-        name: "Charts",
-        to: '/charts',
-        iconItem: `${<SiRtlzwei/>}`
-    },
-    {
-        name: "Farms",
-        to: '/farms',
-        iconItem: `${<BiLineChart />}`
-    },
-    {
-        name: "Pools",
-        to: '/pools',
-        iconItem: `${<GiCloudRing/>}`
-    },
-    {
-        name: "Trading Battle",
-        to: '/trading',
-        iconItem: `${<IoTrophyOutline />}`
-    },
-    {
-        name: "Launchpad",
-        to: '/launchpad',
-        iconItem: `${<RiRocketLine />}`
-    },
-    {
-        name: "Lottery",
-        to: '/lottery',
-        iconItem: `${<AiOutlineGift/>}`
-    },
-    {
-        name: "Kudrops",
-        to: '/ku',
-        iconItem: `${<BiMedal />}`
-    },
-    {
-        name: "Analytics",
-        to: '/analytics',
-        iconItem: `${<TiChartBarOutline />}`
-    },
-    {
-        name: "Governance",
-        to: '/governance',
-        iconItem: `${<AiOutlineBank />}`
-    },
-    {
-        name: "Bridge",
-        to: '/bridge',
-        iconItem: `${<FaRegHandshake />}`
-    },
+// const items = [
+//     {
+//         name: "Home",
+//         to: '/',
+//         iconItem: `${<RiHome3Fill />}`
+//     },
+//     {
+//         name: "Exchange",
+//         to: '/exchange',
+//         iconItem: `${ <RiExchangeLine/>}`
+//     },
+//     {
+//         name: "Liquidity",
+//         to: '/liquidity',
+//         iconItem: `${<RiWaterFlashFill/>}`
+//     },
+//     {
+//         name: "Charts",
+//         to: '/charts',
+//         iconItem: `${<SiRtlzwei/>}`
+//     },
+//     {
+//         name: "Farms",
+//         to: '/farms',
+//         iconItem: `${<BiLineChart />}`
+//     },
+//     {
+//         name: "Pools",
+//         to: '/pools',
+//         iconItem: `${<GiCloudRing/>}`
+//     },
+//     {
+//         name: "Trading Battle",
+//         to: '/trading',
+//         iconItem: `${<IoTrophyOutline />}`
+//     },
+//     {
+//         name: "Launchpad",
+//         to: '/launchpad',
+//         iconItem: `${<RiRocketLine />}`
+//     },
+//     {
+//         name: "Lottery",
+//         to: '/lottery',
+//         iconItem: `${<AiOutlineGift/>}`
+//     },
+//     {
+//         name: "Kudrops",
+//         to: '/ku',
+//         iconItem: `${<BiMedal />}`
+//     },
+//     {
+//         name: "Analytics",
+//         to: '/analytics',
+//         iconItem: `${<TiChartBarOutline />}`
+//     },
+//     {
+//         name: "Governance",
+//         to: '/governance',
+//         iconItem: `${<AiOutlineBank />}`
+//     },
+//     {
+//         name: "Bridge",
+//         to: '/bridge',
+//         iconItem: `${<FaRegHandshake />}`
+//     },
 
-    {
-        name: "More",
-        to: '/',
-        subMenus: [
-            { name: 'Contact' },
-            { name: 'GitHub' },
-            { name: 'Docs' },
-            {name: 'Blog'}
-        ]
-    },
+//     {
+//         name: "More",
+//         to: '/',
+//         subMenus: [
+//             { name: 'Contact' },
+//             { name: 'GitHub' },
+//             { name: 'Docs' },
+//             {name: 'Blog'}
+//         ]
+//     },
     
 
-]
+// ]
 
 const LeftPane = (props) => {
     const [isShown, setIsShown] = useState(false)
-    
     const { isActive, toggleActive } = props;
+
+
+
+    const change = () => {
+        
+    }
 
     return (
         <div className={`left-pane ${isActive ? "": "inactive" }`} 
@@ -119,8 +124,6 @@ const LeftPane = (props) => {
 
                 <div className="toggle-icon">
                 
-                {/* {isShown && ( */}
-                    {/* <button onClick={() => props.changeState()}> */}
                     { isShown && (
                         <button onClick={() => {
                             toggleActive()
@@ -129,16 +132,13 @@ const LeftPane = (props) => {
                             <BsListNested />
                         </button>
                     )}
-                  {/* )}   */}
                 </div>
             </div>
             
-  
-
             <div className="items" >
                 <ul className='list'>
                     <li >
-                        <NavLink to='/' exact activeClassName='selected' >
+                        <NavLink to='/' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                             <RiHome3Fill/>
                         </div>
@@ -146,7 +146,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/exchange' activeClassName='selected' >
+                        <NavLink to='/exchange' activeClassName='selected' onClick={change}>
                         <div className='icon'>
                             <RiExchangeLine/>
                         </div>
@@ -154,7 +154,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/liquidity' exact activeClassName='selected' >
+                        <NavLink to='/liquidity' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                                 <RiWaterFlashFill/>
                             </div>
@@ -163,7 +163,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                    <li>
-                        <NavLink to='/charts' exact activeClassName='selected' >
+                        <NavLink to='/charts' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                                 <SiRtlzwei/>
                             </div>
@@ -171,7 +171,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/farms' exact activeClassName='selected'>
+                        <NavLink to='/farms' exact activeClassName='selected' onClick={change}>
                         <div className='icon'>
                                 <BiLineChart/>
                             </div>
@@ -179,7 +179,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/pools' exact activeClassName='selected' >
+                        <NavLink to='/pools' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                                 <GiCloudRing/>
                             </div>
@@ -188,7 +188,7 @@ const LeftPane = (props) => {
                     </li>
                     
                     <li>
-                        <NavLink to='/trading' exact activeClassName='selected'>
+                        <NavLink to='/trading' exact activeClassName='selected' onClick={change}>
                         <div className='icon'>
                                 <IoTrophyOutline/>
                             </div>
@@ -197,7 +197,7 @@ const LeftPane = (props) => {
                     </li>
 
                     <li>
-                       <NavLink to='/launchpad' exact activeClassName='selected' >
+                       <NavLink to='/launchpad' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                                <RiRocketLine/>
                             </div>
@@ -205,7 +205,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/lottery' exact activeClassName='selected' >
+                        <NavLink to='/lottery' exact activeClassName='selected' onClick={change}>
                          <div className='icon'>
                                 <AiOutlineGift/>
                             </div>
@@ -213,7 +213,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/ku' exact activeClassName='selected'>
+                        <NavLink to='/ku' exact activeClassName='selected' onClick={change}>
                          <div className='icon'>
                                 <BiMedal/>
                             </div>
@@ -221,7 +221,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/analytics' exact activeClassName='selected' >
+                        <NavLink to='/analytics' exact activeClassName='selected' onClick={change}>
                         </NavLink>
                         <div className='icon'>
                                 <TiChartBarOutline/>
@@ -229,7 +229,7 @@ const LeftPane = (props) => {
                         <span className='text'>Analytics</span> 
                     </li>
                     <li>
-                        <NavLink to='/governance' exact activeClassName='selected' >
+                        <NavLink to='/governance' exact activeClassName='selected' onClick={change} >
                         <div className='icon'>
                                 <AiOutlineBank/>
                             </div>
@@ -237,7 +237,7 @@ const LeftPane = (props) => {
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to='/bridge' exact activeClassName='selected' >
+                        <NavLink to='/bridge' exact activeClassName='selected' onClick={change}>
                         <div className='icon'>
                                 <FaRegHandshake/>
                             </div>
@@ -257,6 +257,11 @@ const LeftPane = (props) => {
                     />
                 </ul>
             </div>
+                
+            <div className="circle-1"></div>
+            <div className="circle-2"></div>
+            <div className="circle-3"></div>
+            <div className="circle-4"></div>
 
                 
                 <button className="account">
